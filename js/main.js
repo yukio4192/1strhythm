@@ -4,9 +4,9 @@ var startBtn = document.getElementById("start-btn");
 var pushBtn = document.getElementById("push-btn");
 var resetBtn = document.getElementById("reset-btn");
 
-startBtn.addEventLister('click', gameStart());
-pushBtn.addEventLister('click', judge());
-resetBtn.addEventLister('click', gameInit());
+startBtn.addEventListener('click', gameStart());
+pushBtn.addEventListener('click', judge());
+resetBtn.addEventListener('click', gameInit());
 
 function gameInit(){
 

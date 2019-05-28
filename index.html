@@ -7,18 +7,8 @@
   </head>
   <body>
     <h1>Let's Play Rhythm Game!</h1>
-    <div class="game-window siimple-box siimple-content">
-      <div class="siimple-box siimple--bg-white" align="center">
-        <img class="" src="images/note.png" alt="">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <hr>
-      </div>
+    <div class="game-window siimple-box">
+      <canvas id="canvas" width="300" height="300"></canvas>
       <p class="siimple-p siimple--color-primary">GOOD JOB!</p>
     </div>
 
@@ -27,6 +17,22 @@
       <div id="push-btn" class="siimple-btn siimple-btn--big siimple-btn--primary">push!</div>
       <div id="reset-btn" class="siimple-btn siimple-btn--big siimple-btn--warning">Try Again</div>
     </div>
-    <script src="main.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    onload = function() {
+      draw();
+    };
+
+    function draw(){
+      var canvas = document.getElementById("canvas");
+      if (!canvas || !canvas.getContext){
+         return false;
+       }
+      var ctx = canvas.getContext('2d');
+      ctx.beginPath();
+      ctx.arc(100, 100, 60, 0, Math.PI*2, false);
+      ctx.stroke();
+    }
+    </script>
   </body>
 </html>
